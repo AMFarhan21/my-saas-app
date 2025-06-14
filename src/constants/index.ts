@@ -56,4 +56,20 @@ export const recentSessions = [
         duration: 45,
         color: "#FFC8E4"
     },
+    {
+        id: "5",
+        subject: "coding",
+        name: "Codey the Logic Hacker",
+        topic: "Intro to If-Else Statements",
+        duration: 45,
+        color: "#8DE7FF"
+    },
+    {
+        id: "6",
+        subject: "maths",
+        name: "Countsy the Number Wizard",
+        topic: "Derivatives & Integrals",
+        duration: 30,
+        color: "#FFDA6E"
+    },
 ]

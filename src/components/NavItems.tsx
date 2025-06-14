@@ -23,7 +23,7 @@ function NavItems() {
   const pathName = usePathname();
 
   return (
-    <div className="flex gap-2 sm:gap-8 items-center">
+    <div className="flex gap-2 sm:gap-8 items-center text-sm">
       {navItems.map((item) => (
         <Link
           href={item.href}
