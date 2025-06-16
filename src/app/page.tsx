@@ -10,7 +10,7 @@ export default async function Home() {
   const recentSessions = await getRecentSessions(6)
   
   return (
-    <main className="">
+    <main className="mb-10">
       <div className="px-4 sm:px-8 xl:px-40">
         <h1 className="text-2xl underline font-bold mb-8">
           Popular Companions
