@@ -72,6 +72,8 @@ const CompanionForm = () => {
               <SelectItem value="maths">Maths</SelectItem>
               <SelectItem value="language">Language</SelectItem>
               <SelectItem value="coding">Coding</SelectItem>
+              <SelectItem value="history">History</SelectItem>
+              <SelectItem value="economics">Economics</SelectItem>
             </SelectContent>
           </Select>
           <div> {subject} </div>

@@ -1,34 +1,18 @@
-import CompanionCard from "@/components/CompanionsCard"
-import prisma from "@/lib/prisma"
-import { auth } from "@clerk/nextjs/server"
+import AllCompanions from "@/components/AllCompanions";
+import { getAllCompanions } from "@/lib/actions/companion.action"
 
 
 const CompanionsLibrary = async () => {
-
-  const companions = await prisma.companions.findMany()
-  const user = await auth()
-  console.log(user.userId)
-
+  const companions = await getAllCompanions()
 
   return (
-    <main className="p-4 sm:p-8 flex flex-wrap gap-4 sm:gap-8 justify-center">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
-        {
-          companions.map((companion) => {
-            return (
-              <CompanionCard
-                key={companion.id}
-                id={companion.id}
-                name={companion.name}
-                subject={companion.subject}
-                topic={companion.topic}
-                duration={companion?.duration}
-                color={""}
-              />
-            )
-          })
-        }
+    <main className="px-4 sm:px-8 xl:px-40 flex-wrap gap-4 sm:gap-8 justify-center">
+      <div className="font-bold text-xl py-4">
+        <h1>Companion Library</h1>
       </div>
+      <AllCompanions
+        companions={companions ? companions : []}
+      />
     </main>
   )
 }

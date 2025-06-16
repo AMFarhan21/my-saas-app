@@ -9,7 +9,7 @@ interface CompanionsCardProps {
     subject: string | null;
     name?: string | null;
     topic?: string | null;
-    duration: bigint | null;
+    duration: number | bigint | null;
     color: string;
 }
 
